@@ -43,7 +43,35 @@ export default function AboutPage() {
               The Birth & Calling of Grandpa Derek
             </h2>
 
-            <p>
+            {/* Profile & Altar Showcase */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 my-6 not-prose">
+              <div className="rounded-2xl overflow-hidden border border-amber-500/40 shadow-xl bg-black">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/news-225x300.jpg"
+                  alt="Grandpa Derek Traditional African Spiritual Master"
+                  className="w-full h-72 object-cover"
+                />
+                <div className="p-3 text-center bg-[#0d121f]">
+                  <span className="text-xs text-amber-400 font-bold">Grandpa Derek</span>
+                  <span className="text-xs text-slate-300 block">Master Spiritual Healer</span>
+                </div>
+              </div>
+              <div className="rounded-2xl overflow-hidden border border-amber-500/40 shadow-xl bg-black">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/calabash-1030x438.jpg"
+                  alt="Ancient Ancestral Calabash & Altar"
+                  className="w-full h-72 object-cover"
+                />
+                <div className="p-3 text-center bg-[#0d121f]">
+                  <span className="text-xs text-amber-400 font-bold">Sacred Ancestral Shrine</span>
+                  <span className="text-xs text-slate-300 block">Baganda Traditional Healing Altar</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-slate-100 text-base leading-relaxed">
               Grandpa Derek was born into a family of venerable traditional healers in the sacred mountains of Kigoma, Tanzania. From the very moment of his birth, it was recognized by the elders that he carried the profound spirit and mandate of his ancestors.
             </p>
 

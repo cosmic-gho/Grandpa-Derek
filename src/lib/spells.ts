@@ -8,6 +8,7 @@ export interface SpellItem {
   excerpt: string;
   date: string;
   featured_media_url?: string;
+  featured_image?: string;
   category?: string;
 }
 

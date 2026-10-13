@@ -102,6 +102,19 @@ export default async function SpellDetailPage({ params }: Props) {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
             {spell.title}
           </h1>
+
+          {/* Featured Article Banner Image */}
+          {spell.featured_image && (
+            <div className="relative w-full h-[280px] sm:h-[400px] rounded-3xl overflow-hidden border border-amber-900/40 shadow-2xl my-6">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={spell.featured_image}
+                alt={spell.title}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e19] via-transparent to-transparent" />
+            </div>
+          )}
         </header>
 
         {/* Callout box for immediate help */}
