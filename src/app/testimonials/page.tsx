@@ -55,7 +55,7 @@ const TESTIMONIALS = [
     name: "Amara K.",
     location: "Nairobi, Kenya",
     category: "Lost Lover Reunion",
-    image: "/images/bench-couple-girl-984945.jpg",
+    image: "/images/woman-and-man-hugging-each-other-under-cloudy-sky-1390221.jpg",
     quote:
       "He had blocked my phone number and social media accounts for over 8 months. Grandpa Derek told me to remain patient while he performed the ancestral shrine invocations. On the fourth evening, he unblocked me and called at 2 AM crying. We are reunited!",
   },
