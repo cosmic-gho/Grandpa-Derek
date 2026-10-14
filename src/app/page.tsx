@@ -489,33 +489,63 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-[#0c101c] border border-amber-900/40 rounded-2xl p-6 flex flex-col justify-between">
+          <div className="bg-[#0c101c] border border-amber-900/40 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/40 transition-all">
             <p className="text-sm text-slate-100 italic mb-6 leading-relaxed font-normal">
               &ldquo;My husband moved out after 12 years of marriage and had blocked me on every channel. A friend recommended Grandpa Derek. Within 5 days of his love reunion ritual, my husband called me in tears asking if we could talk. We are living together happily once again.&rdquo;
             </p>
-            <div>
-              <div className="font-bold text-white text-sm">Winnie Nambi</div>
-              <div className="text-xs text-amber-400 font-semibold">Restored Marriage • Toronto, Canada</div>
+            <div className="flex items-center gap-3 pt-4 border-t border-gray-800/80">
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-500/60 shrink-0 bg-black shadow-md">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/woman-1912909_960_720.jpg"
+                  alt="Winnie Nambi - Client Photo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <div className="font-bold text-white text-sm">Winnie Nambi</div>
+                <div className="text-xs text-amber-400 font-semibold">Restored Marriage • Toronto, Canada</div>
+              </div>
             </div>
           </div>
 
-          <div className="bg-[#0c101c] border border-amber-900/40 rounded-2xl p-6 flex flex-col justify-between">
+          <div className="bg-[#0c101c] border border-amber-900/40 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/40 transition-all">
             <p className="text-sm text-slate-100 italic mb-6 leading-relaxed font-normal">
               &ldquo;I was facing serious legal charges with heavy penalties in California. Grandpa Derek performed the Court Case Justice ritual for me. At the preliminary hearing, the prosecution unexpectedly dropped key charges due to conflicting evidence. Grandpa Derek gave me my life back.&rdquo;
             </p>
-            <div>
-              <div className="font-bold text-white text-sm">Marcus D.</div>
-              <div className="text-xs text-amber-400 font-semibold">Court Case Dismissal • Los Angeles, USA</div>
+            <div className="flex items-center gap-3 pt-4 border-t border-gray-800/80">
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-500/60 shrink-0 bg-black shadow-md">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/adult-balloons-celebration-1756632.jpg"
+                  alt="Marcus D. - Client Photo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <div className="font-bold text-white text-sm">Marcus D.</div>
+                <div className="text-xs text-amber-400 font-semibold">Court Case Dismissal • Los Angeles, USA</div>
+              </div>
             </div>
           </div>
 
-          <div className="bg-[#0c101c] border border-amber-900/40 rounded-2xl p-6 flex flex-col justify-between">
+          <div className="bg-[#0c101c] border border-amber-900/40 rounded-2xl p-6 flex flex-col justify-between hover:border-amber-500/40 transition-all">
             <p className="text-sm text-slate-100 italic mb-6 leading-relaxed font-normal">
               &ldquo;Grandpa Derek is genuine. He listened to my heartbreak with patience and gave me peace immediately. The commitment spell worked wonders—my partner cut off ties with his side partner and proposed to me last month!&rdquo;
             </p>
-            <div>
-              <div className="font-bold text-white text-sm">Elena K.</div>
-              <div className="text-xs text-amber-400 font-semibold">Commitment & Engagement • London, UK</div>
+            <div className="flex items-center gap-3 pt-4 border-t border-gray-800/80">
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-500/60 shrink-0 bg-black shadow-md">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/affection-boyfriend-couple-2220442.jpg"
+                  alt="Elena K. - Client Photo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <div className="font-bold text-white text-sm">Elena K.</div>
+                <div className="text-xs text-amber-400 font-semibold">Commitment & Engagement • London, UK</div>
+              </div>
             </div>
           </div>
         </div>

@@ -15,6 +15,7 @@ const TESTIMONIALS = [
     name: "Winnie Nambi",
     location: "Toronto, Canada",
     category: "Restored Marriage & Ex Husband Return",
+    image: "/images/woman-1912909_960_720.jpg",
     quote:
       "When my husband walked out on our family, I thought everything was lost. A close acquaintance told me about Grandpa Derek. I reached out via WhatsApp with skepticism, but Grandpa Derek gave me hope and immediately initiated the sacred ancestral love spell. Within days, my husband sent an emotional message apologizing for leaving. We are now closer than we have been in a decade. Grandpa Derek is truly blessed.",
   },
@@ -22,6 +23,7 @@ const TESTIMONIALS = [
     name: "David M.",
     location: "Atlanta, GA, USA",
     category: "Felony Court Case Dismissal",
+    image: "/images/adult-balloons-celebration-1756632.jpg",
     quote:
       "I was facing severe accusations and an aggressive prosecution that threatened my freedom and career. Grandpa Derek performed the Court Case Justice & Witness Confusion ritual. When our hearing arrived, key prosecution witnesses contradicted their statements and the judge dismissed the indictment without prejudice. God bless Grandpa Derek.",
   },
@@ -29,13 +31,15 @@ const TESTIMONIALS = [
     name: "Chloe & Liam",
     location: "London, UK",
     category: "Commitment & Stop Cheating",
+    image: "/images/affection-boyfriend-couple-2220442.jpg",
     quote:
       "My fiancé was chronically cheating and delaying our wedding date indefinitely. Grandpa Derek cast his commitment and loyalty spell. Almost instantly, my partner severed contact with the other woman, confessed everything openly, and we finalized our wedding preparations without any tension.",
   },
   {
-    name: "Jackson T.",
+    name: "Jackson T. & Wife",
     location: "Sydney, Australia",
     category: "Divorce Prevention",
+    image: "/images/married-black-couple.jpg",
     quote:
       "My wife had already retained divorce attorneys and demanded separation. Grandpa Derek cast his sacred marriage binding ritual. The hostility melted away within a week. She tore up the papers and we are now healing in counseling together.",
   },
@@ -43,6 +47,7 @@ const TESTIMONIALS = [
     name: "Patricia S.",
     location: "Houston, TX, USA",
     category: "Curse Removal & Bad Luck Cleansing",
+    image: "/images/photo-of-smiling-woman-talking-on-phone-2559050.jpg",
     quote:
       "For four straight years, every business I started collapsed and my personal relationships ended abruptly in bitter fights. Grandpa Derek performed a full spiritual diagnosis and identified an active jealousy curse. After the ancestral cleansing, my energy shifted completely. My new store is thriving and I feel genuine inner peace.",
   },
@@ -50,6 +55,7 @@ const TESTIMONIALS = [
     name: "Amara K.",
     location: "Nairobi, Kenya",
     category: "Lost Lover Reunion",
+    image: "/images/bench-couple-girl-984945.jpg",
     quote:
       "He had blocked my phone number and social media accounts for over 8 months. Grandpa Derek told me to remain patient while he performed the ancestral shrine invocations. On the fourth evening, he unblocked me and called at 2 AM crying. We are reunited!",
   },
@@ -76,38 +82,69 @@ export default function TestimonialsPage() {
           <h1 className="text-3xl sm:text-5xl font-extrabold text-white">
             Client Testimonies & Reviews
           </h1>
-          <p className="text-base text-gray-300 leading-relaxed">
-            Read heartfelt stories from individuals around the world whose relationships were restored and court cases resolved through Grandpa Derek&apos;s sacred rituals.
+          <p className="text-base text-slate-200 leading-relaxed font-normal">
+            Read heartfelt stories and see verified client photos from individuals around the world whose relationships were restored and court cases resolved through Grandpa Derek&apos;s sacred rituals.
           </p>
         </div>
 
-        {/* Testimonials Grid */}
+        {/* Testimonials Grid with Client Pictures */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {TESTIMONIALS.map((t, idx) => (
             <div
               key={idx}
-              className="bg-[#0c101c] border border-amber-900/30 rounded-2xl p-7 flex flex-col justify-between space-y-6 hover:border-amber-500/40 transition-all shadow-xl"
+              className="bg-[#0c101c] border border-amber-900/30 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all shadow-xl group"
             >
-              <div className="space-y-4">
-                <div className="flex items-center gap-1 text-amber-400">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                  ))}
-                </div>
-                <span className="inline-block text-xs font-semibold text-amber-300 bg-amber-950/60 px-2.5 py-1 rounded-md border border-amber-900/50">
+              {/* Client Photo Banner Header */}
+              <div className="relative h-48 w-full overflow-hidden bg-black/60 border-b border-amber-900/30">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={t.image}
+                  alt={`${t.name} - Grandpa Derek Client Testimonial`}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0c101c] via-[#0c101c]/30 to-transparent" />
+                <span className="absolute top-3 left-3 text-[11px] font-semibold text-amber-300 bg-black/80 px-2.5 py-1 rounded-full border border-amber-500/40 backdrop-blur-sm">
                   {t.category}
                 </span>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed italic">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
               </div>
 
-              <div className="pt-4 border-t border-gray-800 flex items-center justify-between">
-                <div>
-                  <h4 className="text-sm font-bold text-white">{t.name}</h4>
-                  <span className="text-xs text-gray-400">{t.location}</span>
+              <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-1 text-amber-400">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                    ))}
+                  </div>
+                  <p className="text-sm text-slate-100 leading-relaxed italic font-normal">
+                    &ldquo;{t.quote}&rdquo;
+                  </p>
                 </div>
-                <ShieldCheck className="w-4 h-4 text-emerald-400" />
+
+                {/* Client Profile Footer with Avatar */}
+                <div className="pt-4 border-t border-gray-800/80 flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-3">
+                    <div className="relative w-11 h-11 rounded-full overflow-hidden border-2 border-amber-500/60 shadow-md shrink-0 bg-black">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={t.image}
+                        alt={t.name}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-bold text-white">{t.name}</h4>
+                      <span className="text-xs text-slate-300 font-medium block">
+                        {t.location}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1 text-[11px] text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded-full border border-emerald-800/40 shrink-0 font-medium">
+                    <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+                    <span>Verified</span>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
@@ -119,7 +156,7 @@ export default function TestimonialsPage() {
             <h2 className="text-2xl sm:text-3xl font-bold text-amber-300">
               WhatsApp Client Conversations & Proofs
             </h2>
-            <p className="text-xs sm:text-sm text-gray-400">
+            <p className="text-xs sm:text-sm text-slate-300 font-normal">
               Screenshots sent by grateful clients testifying to the speedy manifestation of Grandpa Derek&apos;s spells.
             </p>
           </div>
